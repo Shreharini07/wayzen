@@ -1,0 +1,115 @@
+body{
+    margin:0;
+    background:#020617;
+    color:white;
+    font-family:Arial;
+}
+
+h1{
+    text-align:center;
+    padding:12px;
+    margin:0;
+    background:black;
+    color:#38bdf8;
+}
+
+.controls{
+    display:flex;
+    gap:10px;
+    padding:10px;
+    justify-content:center;
+    background:black;
+}
+
+.controls input{
+    padding:10px;
+    border-radius:8px;
+    border:none;
+    width:200px;
+}
+
+.controls button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#38bdf8;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.controls button:disabled{
+    opacity:0.6;
+}
+
+#statusBar{
+    text-align:center;
+    padding:8px;
+    background:black;
+    color:#38bdf8;
+}
+
+#map{
+    height:60vh;
+}
+
+#routes{
+    display:flex;
+    gap:10px;
+    padding:10px;
+}
+
+.route-card{
+    background:#0f172a;
+    padding:12px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.route-card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 12px #38bdf8;
+}
+
+.sos-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:50%;
+    width:70px;
+    height:70px;
+    font-weight:bold;
+}
+
+.modal{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:black;
+    padding:20px;
+    border-radius:12px;
+    display:none;
+}
+
+.sos-modal{
+    border:2px solid red;
+    box-shadow:0 0 25px red;
+}
+
+.danger-zone{
+    width:20px;
+    height:20px;
+    background:red;
+    border-radius:50%;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{ box-shadow:0 0 0 0 rgba(239,68,68,0.7); }
+    70%{ box-shadow:0 0 0 25px rgba(239,68,68,0); }
+    100%{ box-shadow:0 0 0 0 rgba(239,68,68,0); }
+}

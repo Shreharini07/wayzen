@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wayzen</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<h1>Wayzen</h1>
+
+<div class="controls">
+    <input id="start" placeholder="Start location">
+    <input id="end" placeholder="Destination">
+    <button id="routeBtn" onclick="generateRoutes()">Find Routes</button>
+</div>
+
+<div id="statusBar">Ready</div>
+
+<div id="map"></div>
+
+<div id="routes"></div>
+
+<button class="sos-btn" onclick="triggerSOS()">SOS</button>
+
+
+<div id="surveyModal" class="modal">
+    <h2>Journey Feedback</h2>
+
+    <select id="rating">
+        <option value="">Rate your trip</option>
+        <option value="Good">✅ Good</option>
+        <option value="Fair">🙂 Fair</option>
+        <option value="Bad">⚠ Bad</option>
+        <option value="Poor">❌ Poor</option>
+    </select>
+
+    <textarea id="feedback" placeholder="Comments..."></textarea>
+
+    <button onclick="submitSurvey()">Submit Feedback</button>
+</div>
+
+
+<div id="sosModal" class="modal sos-modal">
+    <h2>🚨 EMERGENCY MODE ACTIVATED</h2>
+    <p>📍 Live Location Shared</p>
+    <p>📞 Contacting Emergency Services</p>
+    <button onclick="closeSOS()">Close</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
